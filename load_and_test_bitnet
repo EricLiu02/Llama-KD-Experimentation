@@ -1,0 +1,30 @@
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+# Use a pipeline as a high-level helper
+from transformers import pipeline
+
+pipe = pipeline("text-generation", model="1bitLLM/bitnet_b1_58-3B")
+
+pipe("Hello, how are you?")
+# # Choose your model
+# model_name = "your-bitnet-huggingface-repo"  # Replace with actual BitNet repo on HF
+
+# # Load tokenizer
+# tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# # Load model (default FP16 if GPU available)
+# device = "cuda" if torch.cuda.is_available() else "cpu"
+# model = AutoModelForCausalLM.from_pretrained(
+#     model_name,
+#     torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+#     device_map="auto"
+# ).to(device)
+
+# # Test the model
+# input_text = "What is knowledge distillation?"
+# input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to(device)
+
+# with torch.no_grad():
+#     output = model.generate(input_ids, max_new_tokens=50)
+
+# print("Generated Text:", tokenizer.decode(output[0], skip_special_tokens=True))
