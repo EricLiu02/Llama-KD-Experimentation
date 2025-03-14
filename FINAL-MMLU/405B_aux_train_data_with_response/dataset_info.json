@@ -1,0 +1,71 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "subject": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "choices": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "llama_input": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "llama_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "llama_logprobs": {
+      "bytes": {
+        "feature": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "logprob": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "token": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "top_logprobs": [
+        {
+          "bytes": {
+            "feature": {
+              "dtype": "int64",
+              "_type": "Value"
+            },
+            "_type": "Sequence"
+          },
+          "logprob": {
+            "dtype": "float64",
+            "_type": "Value"
+          },
+          "token": {
+            "dtype": "string",
+            "_type": "Value"
+          }
+        }
+      ]
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
